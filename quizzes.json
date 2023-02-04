@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "63d498e0f6148174089b7a00"
+  },
+  "title": "Quiz DEF",
+  "question": "## Another Test\ntesting 123\n* list\n* another list",
+  "__v": 0,
+  "license": "CC BY-ND",
+  "subject": "Business & Management"
+},{
+  "_id": {
+    "$oid": "63db298e8d72b1e873e62a5e"
+  },
+  "title": "New Quiz 1",
+  "question": "## Quiz Title\n * list",
+  "license": "CC BY-SA",
+  "subject": "Chemistry",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675307251449"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63db29a98d72b1e873e62a61"
+  },
+  "title": "New Quiz 55323",
+  "question": "## Quiz Title\n * list\n * ANother item",
+  "license": "CC BY-ND",
+  "subject": "Business & Management",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675307251449"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63db29be8d72b1e873e62a63"
+  },
+  "title": "New Quiz 3",
+  "question": "## Quiz Title\n * list",
+  "license": "CC BY-NC",
+  "subject": "Biology",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675307251449"
+    }
+  },
+  "__v": 0
+}]
