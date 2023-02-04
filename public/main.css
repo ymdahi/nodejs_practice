@@ -69,6 +69,9 @@
 html {
   font-size: 112.5%;
 }
+html, body {
+  height: 100%;
+}
 
 body {
   background: var(--backgroundColor);

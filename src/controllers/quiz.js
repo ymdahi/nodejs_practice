@@ -2,8 +2,32 @@ const Quiz = require('../models/quiz')
 const asyncWrapper = require('../routes/async')
 
 const getAllQuizzes = asyncWrapper( async (req, res) => {
-  const quizzes = await Quiz.find({})
-  res.status(200).json({quizzes})
+  const {title, license, subject, sort} = req.query
+  const queryObject = {} 
+
+  if (license) {
+    queryObject.license = license
+  }
+  if (subject) {
+    queryObject.subject = subject
+  }
+  if (title) {
+    queryObject.title = { $regex: title, $options: 'i' }
+  }
+
+  let result = Quiz.find(queryObject)
+
+  if (sort) {
+    const sortList = sort.split(',').join(' ')
+    result = result.sort(sortList)
+  } else {
+    result.sort('-createdAt')
+  }
+
+  const quizzes = await result
+
+
+  res.status(200).json({quizzes, nbHits: quizzes.length})
 })
 
 const createQuiz = asyncWrapper(async (req, res) => {
